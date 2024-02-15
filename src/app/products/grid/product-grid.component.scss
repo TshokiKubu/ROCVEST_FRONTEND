@@ -1,0 +1,5 @@
+@use 'layout';
+
+.products {
+  @include layout.three-across;
+}

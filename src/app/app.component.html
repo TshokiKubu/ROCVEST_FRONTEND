@@ -1,0 +1,13 @@
+<button (click)="toggleView()" [disabled]="showList">List</button>
+<button (click)="toggleView()" [disabled]="!showList">Grid</button>
+
+<app-product-list
+  [products]="myProducts"
+  (selectProd)="logProduct($event)"
+  *ngIf="showList"></app-product-list>
+
+<app-product-grid
+  [products]="myProducts"
+  (selectProd)="logProduct($event)"
+  *ngIf="!showList"
+></app-product-grid>

@@ -1,0 +1,8 @@
+<h2>{{ heading }}</h2>
+
+<div class="products">
+  <article *ngFor="let e of products">
+    <header>{{ e.title }} R{{ e.price }}</header>
+    <button (click)="selectProduct(e)">Select</button>
+  </article>
+</div>
